@@ -91,6 +91,7 @@ void GuideInput()
     book.WriteData();
 	cout<<"Write Finish"<<endl;
 	WaitUser();
+	system("pause");
 }
 long GetFileLength(ifstream &ifs)
 {
@@ -146,13 +147,13 @@ try{
 		   if(blndex)
 			   cout<<setw(3)<<((iCurPage-1)*20+i);
 		   ifile.read(inName,NUM1);
-		   cout<<setw(24)<<inName;
+		   cout<<setw(22)<<inName;
 		   ifile.read(inlsbn,NUM1);
 		   cout<<setw(24)<<inName;
 		   ifile.read(price,NUM2);
 		   cout<<setw(12)<<price;
 		   ifile.read(inAuthor,NUM2);
-		   cout<<setw(12)<<inAuthor;
+		   cout<<setw(15)<<inAuthor;
 		   cout<<endl;
 		   if(ifile.tellg()<0)
 			   blndex=false;
